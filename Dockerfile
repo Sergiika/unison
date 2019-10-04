@@ -7,6 +7,7 @@ RUN apt-get -y update \
   && add-apt-repository --yes ppa:avsm/ppa \
   && apt-get update -qq \
   && apt-get install -y opam build-essential \
+  && apt-get install -y ocaml-native-compilers \
   && eval $(opam config env)
 
 ADD . /tmp/unison
